@@ -3,13 +3,12 @@
 import { redirect } from "next/navigation"
 import { revalidatePath } from "next/cache"
 import { addBlog, getBlogById, incrementLikes } from "../services/blogs"
-import { isNumberObject } from "util/types"
 
 export const createBlog = async (formData: FormData) => {
   const title = formData.get("title") as string
   const author = formData.get("author") as string
   const url = formData.get("url") as string
-  const likes = parseInt(formData.get("likes") as string)
+  const likes = 0
   await addBlog(title, author, url, likes)
 
   revalidatePath("/blogs")

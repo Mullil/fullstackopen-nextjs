@@ -1,5 +1,5 @@
 {
-  "id": "83359b32-95ac-4cfa-bca8-ac2db9781a8c",
+  "id": "f228d87c-d41c-40a9-b245-b0c00c9615cb",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -34,7 +34,7 @@
         },
         "likes": {
           "name": "likes",
-          "type": "serial",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true,
           "default": 0
