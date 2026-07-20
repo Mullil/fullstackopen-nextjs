@@ -1,0 +1,17 @@
+import { db } from "@/db"
+import { blogs, readingLists, users } from "@/db/schema"
+import { NextResponse } from "next/server"
+
+export async function DELETE() {
+    if (process.env.NODE_ENV === "production") {
+    return NextResponse.json(
+        { error: "This endpoint is not available in production" },
+        { status: 403 },
+    )
+    }
+    await db.delete(readingLists).execute()
+    await db.delete(blogs).execute()
+    await db.delete(users).execute()
+
+    return NextResponse.json({ success: true })
+}

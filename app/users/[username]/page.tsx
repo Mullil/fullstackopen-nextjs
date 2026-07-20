@@ -12,17 +12,19 @@ const UserPage = async ({ params }: { params: Promise<{ username: string }> }) =
 
   return (
     <div>
-      <h2>{user.name}</h2>
-      <p>Username: {user.username}</p>
-      <h3>Blogs</h3>
+      <h2 className="text-2xl font-semibold text-slate-900">{user.name}</h2>
+      <p className="text-slate-600">Username: {user.username}</p>
+      <h3 className="text-lg font-semibold text-slate-900">Blogs</h3>
       <ul>
         {user.blogs.map((blog) => (
+          <span key={blog.id} className="block rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md">
           <li key={blog.id}>
             <Link href={`/blogs/${blog.id}`}>{blog.title}</Link>
             <p>{blog.author}</p>
             <p>Likes: {blog.likes}</p>
             <p>url: {blog.url}</p>
           </li>
+          </span>
         ))}
       </ul>
     </div>

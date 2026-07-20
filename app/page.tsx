@@ -1,19 +1,10 @@
+import Homepage from "./homepage.mdx"
+
 const Home = () => {
   return (
-    <div>
-      <div>
-        <h2>blogs app</h2>
-        An example app for{" "}
-        <a href="https://courses.mooc.fi/org/uh-cs/courses/full-stack-open-nextjs">
-          Full Stack Open Next.js
-        </a>
-      </div>
-      <div>
-        See{" "}
-        <a href="https://github.com/fullstack-hy2020/nextjs-notes">
-          https://github.com/fullstack-hy2020/nextjs-notes
-        </a>{" "}
-        for the source code
+    <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+      <div className="markdown">
+        <Homepage />
       </div>
     </div>
   )
