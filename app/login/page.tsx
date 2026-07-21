@@ -41,13 +41,13 @@ export default function LoginPage() {
         <div>
           <label>
             Username
-            <input type="text" name="username" required />
+            <input className="border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="username" required />
           </label>
         </div>
         <div>
           <label>
             Password
-            <input type="password" name="password" required />
+            <input className="border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500" type="password" name="password" required />
           </label>
         </div>
         <button
