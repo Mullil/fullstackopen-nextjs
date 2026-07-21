@@ -3,7 +3,7 @@ import postgres from "postgres"
 import * as dotenv from "dotenv"
 import * as schema from "./schema"
 
-dotenv.config({ path: ".env.local" })
+dotenv.config({ path: [".env.test", ".env.local"] })
 
 const connectionString = process.env.DATABASE_URL
 
